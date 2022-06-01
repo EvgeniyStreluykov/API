@@ -7,7 +7,7 @@ document.querySelector("#search").addEventListener("click", () => {
     apiRequest();
 });
 
-apiRequest = () => {
+const apiRequest = () => {
   document.querySelector("#grid").textContent = "";
 
   const url = 'https://api.unsplash.com/search/photos?query='+input.value+'&per_page=30&client_id=SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo';
@@ -24,7 +24,7 @@ apiRequest = () => {
    .catch(error => console.log(error));
 }
 
-loadImages = (data) => {
+const loadImages = (data) => {
   for(let i = 0; i < data.results.length; i++) {
     const image = document.createElement("div");
 
@@ -53,7 +53,7 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
-bgcolor = () => {
+const bgcolor = () => {
   const date = new Date();
   const hour = date.getHours();
 
