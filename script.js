@@ -1,5 +1,3 @@
-
-
 document.querySelector("#input").addEventListener("keydown", (event) => {
   if (event.key == "Enter")
     apiRequest();
@@ -30,7 +28,7 @@ apiRequest = () => {
 }
 
 loadImages = (data) => {
-  for(i = 0; i < data.results.length; i++) {
+  for(let i = 0; i < data.results.length; i++) {
     let image = document.createElement("div");
     image.className = "img";
     image.style.backgroundImage = "url("+data.results[i].urls.raw + "&w=1366&h=768" +")";
